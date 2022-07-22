@@ -29,7 +29,7 @@ func main() {
 
 	parser := flags.NewParser(server, flags.Default)
 	parser.ShortDescription = "hello-world"
-	parser.LongDescription = "A simple \"Hello World\" function"
+	parser.LongDescription = "A simple \"Hello World\" function."
 	server.ConfigureFlags()
 	for _, optsGroup := range api.CommandLineOptionsGroups {
 		_, err := parser.AddGroup(optsGroup.ShortDescription, optsGroup.LongDescription, optsGroup.Options)

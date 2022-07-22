@@ -51,7 +51,7 @@ func NewHelloWorldAPI(spec *loads.Document) *HelloWorldAPI {
 	}
 }
 
-/*HelloWorldAPI A simple "Hello World" function */
+/*HelloWorldAPI A simple "Hello World" function. */
 type HelloWorldAPI struct {
 	spec            *loads.Document
 	context         *middleware.Context

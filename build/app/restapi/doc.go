@@ -2,12 +2,12 @@
 
 // Package restapi hello-world
 //
-//  A simple "Hello World" function
+//  A simple "Hello World" function.
 //  Schemes:
 //    http
 //  Host: localhost
 //  BasePath: /
-//  Version: 1.0
+//  Version: 1.1
 //
 //  Consumes:
 //    - application/json

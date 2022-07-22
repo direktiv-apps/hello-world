@@ -1,7 +1,7 @@
 
-# hello-world 1.0
+# hello-world 1.1
 
-A simple "Hello World" function
+A simple "Hello World" function.
 
 ---
 - #### Categories: unspecified

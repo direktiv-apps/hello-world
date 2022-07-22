@@ -29,9 +29,9 @@ func init() {
   ],
   "swagger": "2.0",
   "info": {
-    "description": "A simple \"Hello World\" function",
+    "description": "A simple \"Hello World\" function.",
     "title": "hello-world",
-    "version": "1.0",
+    "version": "1.1",
     "x-direktiv-meta": {
       "categories": [
         "unspecified"
@@ -190,9 +190,9 @@ func init() {
   ],
   "swagger": "2.0",
   "info": {
-    "description": "A simple \"Hello World\" function",
+    "description": "A simple \"Hello World\" function.",
     "title": "hello-world",
-    "version": "1.0",
+    "version": "1.1",
     "x-direktiv-meta": {
       "categories": [
         "unspecified"
