@@ -11,7 +11,7 @@ RUN cd src && \
     export CGO_LDFLAGS="-static -w -s" && \
     go build -tags osusergo,netgo -o /application cmd/hello-world-server/main.go; 
 
-FROM ubuntu:21.04
+FROM ubuntu:22.04
 
 RUN apt-get update && apt-get install ca-certificates -y
 
@@ -19,6 +19,5 @@ RUN apt-get update && apt-get install ca-certificates -y
 COPY --from=build /application /bin/application
 
 EXPOSE 8080
-EXPOSE 9292
 
 CMD ["/bin/application", "--port=8080", "--host=0.0.0.0", "--write-timeout=0"]
