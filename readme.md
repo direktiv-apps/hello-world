@@ -1,5 +1,5 @@
 
-# hello-world 1.1
+# hello-world 1.2
 
 A simple "Hello World" function.
 

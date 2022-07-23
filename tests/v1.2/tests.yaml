@@ -1,0 +1,12 @@
+url: ""
+functions:
+- type: knative-workflow
+  id: hello-world
+  image: gcr.io/direktiv/apps/hello-world:1.0
+states:
+- id: state0
+  type: action
+  action:
+    function: hello-world
+    input:
+      name: MyName

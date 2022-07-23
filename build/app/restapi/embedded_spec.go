@@ -31,7 +31,7 @@ func init() {
   "info": {
     "description": "A simple \"Hello World\" function.",
     "title": "hello-world",
-    "version": "1.1",
+    "version": "1.2",
     "x-direktiv-meta": {
       "categories": [
         "unspecified"
@@ -192,7 +192,7 @@ func init() {
   "info": {
     "description": "A simple \"Hello World\" function.",
     "title": "hello-world",
-    "version": "1.1",
+    "version": "1.2",
     "x-direktiv-meta": {
       "categories": [
         "unspecified"
