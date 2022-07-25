@@ -10,7 +10,7 @@ start:
     type: io.direktiv.function.test
     context:
       function: hello-world
-      version: 1.2
+      version: '1.2'
 states:
 - id: call-subflow
   type: action
