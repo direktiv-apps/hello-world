@@ -15,26 +15,15 @@ Scenario: get request
 	And request
 	"""
 	{
-		"commands": [
-		{
-			"command": "ls -la",
-			"silent": true,
-			"print": false,
-		}
-		]
+		"name": "World"
 	}
 	"""
 	When method POST
 	Then status 200
-	And match $ ==
+		And match $ ==
 	"""
 	{
-	"hello-world": [
-	{
-		"result": "#notnull",
-		"success": true
-	}
-	]
+	"hello-world": "Hello World"
 	}
 	"""
 	
