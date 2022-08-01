@@ -5,4 +5,4 @@ if [[ -z "${DIREKTIV_TEST_URL}" ]]; then
 	DIREKTIV_TEST_URL="http://localhost:9191"
 fi
 
-docker run --network=host -v `pwd`/tests/:/tests direktiv/karate java -DtestURL=${DIREKTIV_TEST_URL} -Dlogback.configurationFile=/logging.xml  -jar /karate.jar /tests/v1.2/karate.yaml.test.feature
+docker run --network=host -v `pwd`/tests/:/tests direktiv/karate java -DtestURL=${DIREKTIV_TEST_URL} -Dlogback.configurationFile=/logging.xml  -jar /karate.jar /tests/v1.3/karate.yaml.test.feature ${*:1}

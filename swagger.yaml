@@ -2,7 +2,7 @@ swagger: "2.0"
 info:
   description: A simple "Hello World" function.
   title: hello-world
-  version: "1.2"
+  version: "1.3"
   x-direktiv-meta:
     container: gcr.io/direktiv/apps/hello-world
     maintainer: |-
@@ -65,7 +65,7 @@ paths:
       x-direktiv-function: |-
         functions:
         - id: hello-world
-          image: gcr.io/direktiv/apps/hello-world:1.0
+          image: gcr.io/direktiv/apps/hello-world:1.3
           type: knative-workflow
       x-direktiv-examples:
         - title: Basic

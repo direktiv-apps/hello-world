@@ -31,10 +31,10 @@ func init() {
   "info": {
     "description": "A simple \"Hello World\" function.",
     "title": "hello-world",
-    "version": "1.2",
+    "version": "1.3",
     "x-direktiv-meta": {
       "categories": [
-        "unspecified"
+        "misc"
       ],
       "container": "gcr.io/direktiv/apps/hello-world",
       "issues": "https://github.com/direktiv-apps/hello-world/issues",
@@ -129,7 +129,7 @@ func init() {
             "title": "Basic"
           }
         ],
-        "x-direktiv-function": "functions:\n- id: hello-world\n  image: gcr.io/direktiv/apps/hello-world:1.0\n  type: knative-workflow"
+        "x-direktiv-function": "functions:\n- id: hello-world\n  image: gcr.io/direktiv/apps/hello-world:1.3\n  type: knative-workflow"
       },
       "delete": {
         "parameters": [
@@ -192,10 +192,10 @@ func init() {
   "info": {
     "description": "A simple \"Hello World\" function.",
     "title": "hello-world",
-    "version": "1.2",
+    "version": "1.3",
     "x-direktiv-meta": {
       "categories": [
-        "unspecified"
+        "misc"
       ],
       "container": "gcr.io/direktiv/apps/hello-world",
       "issues": "https://github.com/direktiv-apps/hello-world/issues",
@@ -276,7 +276,7 @@ func init() {
             "title": "Basic"
           }
         ],
-        "x-direktiv-function": "functions:\n- id: hello-world\n  image: gcr.io/direktiv/apps/hello-world:1.0\n  type: knative-workflow"
+        "x-direktiv-function": "functions:\n- id: hello-world\n  image: gcr.io/direktiv/apps/hello-world:1.3\n  type: knative-workflow"
       },
       "delete": {
         "parameters": [
