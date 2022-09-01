@@ -65,7 +65,7 @@ paths:
       x-direktiv-function: |-
         functions:
         - id: hello-world
-          image: gcr.io/direktiv/apps/hello-world:1.3
+          image: direktiv.azurecr.io/functions/hello-world:1.3
           type: knative-workflow
       x-direktiv-examples:
         - title: Basic
