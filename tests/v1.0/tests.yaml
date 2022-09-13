@@ -2,7 +2,7 @@ url: ""
 functions:
 - type: knative-workflow
   id: hello-world
-  image: gcr.io/direktiv/apps/hello-world:test
+  image: gcr.io/direktiv/functions/hello-world:test
 states:
 - id: state0
   type: action

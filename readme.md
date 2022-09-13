@@ -1,11 +1,11 @@
 
-# hello-world 1.3
+# hello-world 1.0
 
 A simple "Hello World" function.
 
 ---
 - #### Categories: misc
-- #### Image: direktiv.azurecr.io/functions/hello-world 
+- #### Image: gcr.io/direktiv/functions/hello-world 
 - #### License: [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)
 - #### Issue Tracking: https://github.com/direktiv-apps/hello-world/issues
 - #### URL: https://github.com/direktiv-apps/hello-world
@@ -21,7 +21,7 @@ Greet yourself with this function.
 ```yaml
 functions:
 - id: hello-world
-  image: direktiv.azurecr.io/functions/hello-world:1.3
+  image: gcr.io/direktiv/functions/hello-world:1.0
   type: knative-workflow
 ```
    #### Basic

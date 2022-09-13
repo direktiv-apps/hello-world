@@ -31,12 +31,12 @@ func init() {
   "info": {
     "description": "A simple \"Hello World\" function.",
     "title": "hello-world",
-    "version": "1.3",
+    "version": "1.0",
     "x-direktiv-meta": {
       "categories": [
         "misc"
       ],
-      "container": "direktiv.azurecr.io/functions/hello-world",
+      "container": "gcr.io/direktiv/functions/hello-world",
       "issues": "https://github.com/direktiv-apps/hello-world/issues",
       "license": "[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)",
       "long-description": "Greet yourself with this function.",
@@ -129,7 +129,7 @@ func init() {
             "title": "Basic"
           }
         ],
-        "x-direktiv-function": "functions:\n- id: hello-world\n  image: direktiv.azurecr.io/functions/hello-world:1.3\n  type: knative-workflow"
+        "x-direktiv-function": "functions:\n- id: hello-world\n  image: gcr.io/direktiv/functions/hello-world:1.0\n  type: knative-workflow"
       },
       "delete": {
         "parameters": [
@@ -192,12 +192,12 @@ func init() {
   "info": {
     "description": "A simple \"Hello World\" function.",
     "title": "hello-world",
-    "version": "1.3",
+    "version": "1.0",
     "x-direktiv-meta": {
       "categories": [
         "misc"
       ],
-      "container": "direktiv.azurecr.io/functions/hello-world",
+      "container": "gcr.io/direktiv/functions/hello-world",
       "issues": "https://github.com/direktiv-apps/hello-world/issues",
       "license": "[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)",
       "long-description": "Greet yourself with this function.",
@@ -276,7 +276,7 @@ func init() {
             "title": "Basic"
           }
         ],
-        "x-direktiv-function": "functions:\n- id: hello-world\n  image: direktiv.azurecr.io/functions/hello-world:1.3\n  type: knative-workflow"
+        "x-direktiv-function": "functions:\n- id: hello-world\n  image: gcr.io/direktiv/functions/hello-world:1.0\n  type: knative-workflow"
       },
       "delete": {
         "parameters": [
