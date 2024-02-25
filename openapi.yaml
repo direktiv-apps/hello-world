@@ -1,0 +1,113 @@
+openapi: 3.0.1
+info:
+  title: hello-world
+  description: A simple "Hello World" function.
+  version: "1.0"
+  x-direktiv-meta:
+    container: gcr.io/direktiv/functions/hello-world
+    maintainer: "[direktiv.io](https://www.direktiv.io) "
+    issues: https://github.com/direktiv-apps/hello-world/issues
+    url: https://github.com/direktiv-apps/hello-world
+    categories:
+    - misc
+    license: "[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)"
+    long-description: Greet yourself with this function.
+servers:
+- url: /
+paths:
+  /:
+    post:
+      parameters:
+      - name: Direktiv-ActionID
+        in: header
+        description: "direktiv action id is an UUID. \nFor development it can be set\
+          \ to 'development'\n"
+        schema:
+          type: string
+          default: development
+      - name: Direktiv-TempDir
+        in: header
+        description: |
+          direktiv temp dir is the working directory for that request
+          For development it can be set to e.g. '/tmp'
+        schema:
+          type: string
+          default: /tmp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              required:
+              - name
+              type: object
+              properties:
+                name:
+                  type: string
+                  default: World
+        required: false
+      responses:
+        "200":
+          description: List of executed commands.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  hello-world:
+                    type: string
+            hello-world:
+              example: Hello MyName
+        default:
+          description: generic error response
+          headers:
+            Direktiv-ErrorMessage:
+              schema:
+                type: string
+            Direktiv-ErrorCode:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+      x-direktiv-function: |-
+        functions:
+        - id: hello-world
+          image: gcr.io/direktiv/functions/hello-world:1.0
+          type: knative-workflow
+      x-direktiv-examples:
+      - title: Basic
+        content: "- id: hello-world\n  type: action\n  action:\n    function: hello-world\n\
+          \    input: \n      name: MyName"
+      x-direktiv:
+        cmds:
+        - action: exec
+          exec: "echo {{ .Name }}"
+        output: |
+          {
+            "hello-world": "Hello {{ index (index . 0) "result" }}"
+          }
+      x-direktiv-errors:
+        io.direktiv.command.error: Command execution failed
+        io.direktiv.output.error: Template error for output generation of the service
+        io.direktiv.ri.error: Can not create information object from request
+      x-codegen-request-body-name: body
+components:
+  schemas:
+    direktivFile:
+      type: object
+      x-go-type:
+        type: DirektivFile
+        import:
+          package: github.com/direktiv/apps/go/pkg/apps
+    error:
+      required:
+      - errorCode
+      - errorMessage
+      type: object
+      properties:
+        errorCode:
+          type: string
+        errorMessage:
+          type: string
+
